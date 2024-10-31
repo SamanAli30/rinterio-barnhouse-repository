@@ -1,22 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rinterio</title>
-</head>
-<body>
+    <!-- linked to DaisyUI and Tailwind css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-manrope {
+        font-family: "Manrope", sans-serif;
+      }
+      @media screen and (max-width: 640px) {
+        .hide {
+          display: none;
+        }
+      }
+    </style>
+    <!-- colors colors colors -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "color-primary": "#ABEF5F",
+              "color-secondery": "#494949",
+              'links': "#737373",
+              'primary-text-color': "#212121",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-manrope text-primary-text-color">
     <!-- header section -->
-     <header>
-        
-     </header>
+    <header class="max-w-screen-xl mx-auto ">
+      <nav>
+        <div class="navbar justify-between bg-base-100">
+            <!-- left side -->
+          <div class="">
+            <div class="bg-color-primary w-7 h-7 rounded-full flex items-center hide justify-center ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 bg-black-300 ">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg>
+            </div>
+            <a class="text-3xl font-bold ml-1 ">Rinterio</a>
+          </div>
+          <!-- middle -->
+          <div class=" hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a class="text-black font-extrabold">Home</a></li>
+              <li><a class="links">Service</a></li>
+              <li><a class="links">Portfolio</a></li>
+              <li><a class="links">Blog</a></li>
+              <li><a class="links">Contact</a></li>
+            </ul>
+          </div>
+          <!-- right side -->
+          <div class="md:bg-color-primary py-3 px-5 rounded-xl">
+            <a class=" hide text-xl font-extrabold mr-2 title-text " >Book Consult 
+            </a>
+               <div class="hide">
+                <div class="bg-black w-7 h-7 rounded-full flex items-center justify-center ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 text-white bg-black-300 ">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                      </svg>
+                </div>
+               </div>
+                <div class="dropdown bg-white">
+                    <div tabindex="0" role="button" class="  lg:hidden ">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16"
+                        />
+                      </svg>
+                    </div> 
+            
+          </div>
+          
+          </div>
+        </div>
+      </nav>
+    </header>
     <!-- main section  -->
     <main></main>
     <!-- footer section  -->
     <footer></footer>
-
-
-
-
-</body>
+  </body>
 </html>
